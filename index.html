@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analisis Pencemaran Air di Kali | Proyek Penelitian</title>
+<style>
+:root{
+  --bg:#f5f8f7; --card:#ffffff; --text:#18312b; --muted:#64756f;
+  --green:#176b57; --green2:#239b78; --mint:#dff3eb; --line:#dce8e3;
+  --shadow:0 14px 35px rgba(24,49,43,.09);
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1120px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.5px;color:var(--green)}
+nav a{color:var(--text);text-decoration:none;margin-left:18px;font-size:14px;font-weight:600}
+nav a:hover{color:var(--green2)}
+.hero{background:linear-gradient(135deg,#103f35,#176b57 55%,#239b78);color:#fff}
+.hero-inner{max-width:1120px;margin:auto;padding:78px 22px 72px;display:grid;grid-template-columns:1.4fr .8fr;gap:40px;align-items:center}
+.badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 13px;border-radius:999px;font-size:13px}
+h1{font-size:clamp(38px,6vw,68px);line-height:1.05;margin:18px 0}
+.hero p{max-width:680px;color:#e2f4ed;font-size:17px}
+.hero-card{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.2);padding:26px;border-radius:24px}
+.hero-card strong{font-size:42px;display:block}
+section{max-width:1120px;margin:auto;padding:68px 22px}
+.section-head{max-width:700px;margin-bottom:28px}
+.kicker{text-transform:uppercase;letter-spacing:2px;color:var(--green2);font-weight:800;font-size:12px}
+h2{font-size:34px;line-height:1.2;margin:7px 0 10px}
+.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.icon{width:44px;height:44px;border-radius:14px;background:var(--mint);display:grid;place-items:center;font-size:22px;margin-bottom:16px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{background:#fff;border:1px solid var(--line);padding:20px;border-radius:18px}
+.stat b{display:block;font-size:32px;color:var(--green)}
+.stat span{font-size:13px;color:var(--muted)}
+.chart{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+.bar{margin:18px 0}
+.bar-top{display:flex;justify-content:space-between;font-size:14px;font-weight:700}
+.track{height:12px;background:#e7efec;border-radius:99px;overflow:hidden;margin-top:7px}
+.fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--green),var(--green2))}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step{position:relative;background:#fff;border:1px solid var(--line);padding:22px;border-radius:18px}
+.step-num{font-weight:900;color:var(--green2);font-size:13px}
+.timeline{border-left:3px solid #bfe3d6;padding-left:22px}
+.timeline-item{margin:0 0 22px}
+.timeline-item h3{margin:0 0 4px}
+.highlight{background:linear-gradient(135deg,#e4f5ee,#f8fffc);border:1px solid #cbe9dd;border-radius:24px;padding:30px}
+.note{font-size:13px;color:#63746e;background:#f0f5f3;padding:12px 15px;border-radius:12px;margin-top:18px}
+footer{background:#123f35;color:#dceee8;text-align:center;padding:30px 22px}
+footer strong{color:#fff}
+@media(max-width:800px){
+  .hero-inner{grid-template-columns:1fr;padding-top:55px}
+  .grid,.stats{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  nav .links{display:none}
+}
+@media(max-width:520px){
+  .grid,.stats,.flow{grid-template-columns:1fr}
+  section{padding:48px 18px}
+  .hero-inner{padding-left:18px;padding-right:18px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav">
+    <div class="logo">KALI • BERSIH</div>
+    <div class="links">
+      <a href="#tentang">Tentang</a>
+      <a href="#analisis">Analisis</a>
+      <a href="#dampak">Dampak</a>
+      <a href="#solusi">Solusi</a>
+      <a href="#kesimpulan">Kesimpulan</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="badge">PROYEK PENELITIAN SEKOLAH • LINGKUNGAN</span>
+      <h1>Analisis Pencemaran Air di Kali Akibat Limbah</h1>
+      <p>
+        Kajian sederhana mengenai sumber pencemaran, dampaknya terhadap ekosistem
+        dan masyarakat, serta langkah yang dapat dilakukan untuk menjaga kualitas air.
+      </p>
+    </div>
+    <div class="hero-card">
+      <span>Fokus penelitian</span>
+      <strong>Air • Limbah • Lingkungan</strong>
+      <p>Memahami hubungan antara aktivitas manusia dan perubahan kualitas air di lingkungan sekitar.</p>
+    </div>
+  </div>
+</header>
+
+<section id="tentang">
+  <div class="section-head">
+    <div class="kicker">01 • Latar belakang</div>
+    <h2>Mengapa pencemaran air perlu dianalisis?</h2>
+    <p class="muted">Kali merupakan bagian penting dari lingkungan. Masuknya limbah secara terus-menerus dapat mengubah kondisi air dan mengganggu kehidupan di dalam maupun sekitar perairan.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="icon">🏭</div><h3>Limbah industri</h3><p class="muted">Air buangan dari kegiatan produksi dapat membawa zat pencemar apabila tidak dikelola dengan baik.</p></div>
+    <div class="card"><div class="icon">🏠</div><h3>Limbah rumah tangga</h3><p class="muted">Sampah, deterjen, minyak, dan air buangan rumah tangga dapat masuk ke saluran air dan kali.</p></div>
+    <div class="card"><div class="icon">🌧️</div><h3>Limpasan permukaan</h3><p class="muted">Air hujan dapat membawa sampah dan berbagai bahan pencemar dari permukaan tanah menuju kali.</p></div>
+  </div>
+</section>
+
+<section id="analisis">
+  <div class="section-head">
+    <div class="kicker">02 • Hasil analisis</div>
+    <h2>Gambaran kondisi pencemaran</h2>
+    <p class="muted">Angka berikut merupakan data simulasi untuk kebutuhan pembelajaran, bukan hasil uji laboratorium pada kali tertentu.</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>3</b><span>Sumber pencemar utama</span></div>
+    <div class="stat"><b>4</b><span>Indikator yang diamati</span></div>
+    <div class="stat"><b>70%</b><span>Contoh tingkat pencemaran relatif</span></div>
+    <div class="stat"><b>3</b><span>Kelompok dampak</span></div>
+  </div>
+  <br>
+  <div class="chart">
+    <h3>Contoh perbandingan sumber limbah</h3>
+    <div class="bar"><div class="bar-top"><span>Rumah tangga</span><span>70%</span></div><div class="track"><div class="fill" style="width:70%"></div></div></div>
+    <div class="bar"><div class="bar-top"><span>Industri</span><span>55%</span></div><div class="track"><div class="fill" style="width:55%"></div></div></div>
+    <div class="bar"><div class="bar-top"><span>Limpasan permukaan</span><span>40%</span></div><div class="track"><div class="fill" style="width:40%"></div></div></div>
+    <div class="note">Catatan: persentase hanya ilustrasi agar konsep analisis mudah dipahami. Jangan digunakan sebagai data kondisi kali sebenarnya.</div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div class="kicker">03 • Metode sederhana</div>
+    <h2>Alur analisis penelitian</h2>
+  </div>
+  <div class="flow">
+    <div class="step"><div class="step-num">01</div><h3>Observasi</h3><p class="muted">Mengamati kondisi air, warna, bau, sampah, dan lingkungan sekitar.</p></div>
+    <div class="step"><div class="step-num">02</div><h3>Identifikasi</h3><p class="muted">Mencatat kemungkinan sumber limbah yang masuk ke kali.</p></div>
+    <div class="step"><div class="step-num">03</div><h3>Analisis</h3><p class="muted">Menghubungkan sumber limbah dengan perubahan kondisi lingkungan.</p></div>
+    <div class="step"><div class="step-num">04</div><h3>Solusi</h3><p class="muted">Menyusun tindakan pencegahan dan pengelolaan limbah.</p></div>
+  </div>
+</section>
+
+<section id="dampak">
+  <div class="section-head">
+    <div class="kicker">04 • Dampak</div>
+    <h2>Dampak pencemaran air</h2>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item"><h3>🌱 Ekosistem</h3><p class="muted">Kualitas air yang menurun dapat mengganggu organisme air dan keseimbangan ekosistem.</p></div>
+    <div class="timeline-item"><h3>🌊 Lingkungan</h3><p class="muted">Sampah dan limbah dapat menyebabkan air berbau, keruh, serta menurunkan kualitas lingkungan sekitar.</p></div>
+    <div class="timeline-item"><h3>👥 Masyarakat</h3><p class="muted">Lingkungan perairan yang tercemar dapat mengurangi kenyamanan dan berpotensi meningkatkan risiko kesehatan apabila tidak ditangani.</p></div>
+  </div>
+</section>
+
+<section id="solusi">
+  <div class="section-head">
+    <div class="kicker">05 • Rekomendasi</div>
+    <h2>Langkah yang dapat dilakukan</h2>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="icon">♻️</div><h3>Kurangi limbah</h3><p class="muted">Kurangi penggunaan barang sekali pakai dan jangan membuang sampah ke saluran air.</p></div>
+    <div class="card"><div class="icon">🗑️</div><h3>Kelola dengan benar</h3><p class="muted">Pisahkan sampah dan pastikan limbah rumah tangga dikelola sebelum dibuang.</p></div>
+    <div class="card"><div class="icon">🔎</div><h3>Pantau lingkungan</h3><p class="muted">Lakukan pengamatan berkala dan laporkan pencemaran kepada pihak yang berwenang.</p></div>
+  </div>
+</section>
+
+<section id="kesimpulan">
+  <div class="highlight">
+    <div class="kicker">06 • Kesimpulan</div>
+    <h2>Menjaga kali berarti menjaga lingkungan</h2>
+    <p>
+      Pencemaran air akibat limbah dapat berasal dari berbagai aktivitas manusia.
+      Pencegahan membutuhkan kebiasaan membuang dan mengelola limbah dengan benar,
+      pengawasan lingkungan, serta kerja sama antara masyarakat, sekolah, pelaku usaha,
+      dan pemerintah.
+    </p>
+    <p><strong>Pesan utama:</strong> mulai dari hal kecil—jangan membuang sampah dan limbah sembarangan.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>PROYEK PENELITIAN LINGKUNGAN</strong><br>
+  Analisis Pencemaran Air di Kali Akibat Limbah
+</footer>
+</body>
+</html>
